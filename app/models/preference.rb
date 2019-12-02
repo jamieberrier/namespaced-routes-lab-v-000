@@ -1,2 +1,2 @@
-class Admin::Preference < ApplicationRecord
+class Preference < ApplicationRecord
 end
