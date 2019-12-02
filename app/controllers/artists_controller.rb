@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 
   # redirects when access is turned off
   def new
-    
+
     @artist = Artist.new
   end
 
