@@ -7,7 +7,9 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  # redirects when access is turned off
   def new
+    
     @artist = Artist.new
   end
 
