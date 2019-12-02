@@ -9,10 +9,10 @@ class ArtistsController < ApplicationController
 
   # redirects when access is turned off
   def new
-    if # check that creating new artists is enabled
+    if allow_create_artists # check that creating new artists is enabled
       @artist = Artist.new
     else # redirect if that preference is disabled
-      redirect_to
+      redirect_to artists_path
     end
   end
 
