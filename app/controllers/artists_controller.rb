@@ -13,7 +13,7 @@ class ArtistsController < ApplicationController
     if @preference.allow_create_artists # check that creating new artists is enabled
       @artist = Artist.new
     else # redirect if that preference is disabled
-      binding.pry
+      #binding.pry
       redirect_to artists_path
     end
   end
