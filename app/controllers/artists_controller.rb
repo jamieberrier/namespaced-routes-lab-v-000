@@ -10,7 +10,8 @@ class ArtistsController < ApplicationController
   # redirects when access is turned off
   def new
     binding.pry
-    if Preference.allow_create_artists # check that creating new artists is enabled
+    @preference = Preference.first
+    if @preference.allow_create_artists # check that creating new artists is enabled
       @artist = Artist.new
     else # redirect if that preference is disabled
       redirect_to artists_path
